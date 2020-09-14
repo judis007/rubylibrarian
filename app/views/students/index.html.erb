@@ -1,0 +1,27 @@
+<center><h1>Students</h1></center>
+   
+ 
+<table class="table container table-bordered">
+ <thead>
+   <tr>
+     <th scope="col">Student</th>
+     <th scope="col">Address</th>
+     <th scope="col" colspan = "3">Actions</th>
+   </tr>
+ </thead>
+ <tbody>
+   <% @students.each do |student| %>
+   <tr>
+     <td><%= student.student %></td>
+     <td><%= student.address %></td>
+     <td><%= link_to "Delete Student", student_path(student), method: :delete, class:"btn btn-danger", data: {confirm: "Are you sure?"} %></td>
+     <td><%= link_to "Edit", edit_student_path(student), class: "btn btn-success" %></td>
+
+     </tr>
+   <% end %>
+  </tbody>
+  </table>
+
+  <div class = "container">
+ <%= link_to "Add New Student", new_student_path(@students), class: "btn btn-info" %>
+  </div>

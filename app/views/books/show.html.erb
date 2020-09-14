@@ -1,0 +1,17 @@
+
+
+<div class="card text-center">
+  <div class="card-header">
+ 
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><strong>Name: <%= @book.name %></strong></h5>
+    <h5 class="card-title"><strong>Author: <%= @book.author %></strong></h5>
+    <p class="card-text"><strong>Synopsis: </strong><i><%= @book.synopsis %></i></p>
+    <%= link_to "Go Back", books_path, class: "btn btn-info" %>
+    <%= link_to "Edit", edit_book_path(@book), class: "btn btn-success" %>
+    <%= link_to "Delete Book", book_path(@book), method: :delete, class:"btn btn-danger", data: {confirm: "Are you sure?"} %>
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+</div>

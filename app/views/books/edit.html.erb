@@ -1,0 +1,14 @@
+<center><h1>Edit Book</h1></center>
+<div class="form-group container">
+<%= form_with(model: @book, local: true) do |f| %>
+    <strong><%= f.label :name %></strong>
+    <%= f.text_field :name, class: "form-control", id: "exampleInputEmail1" %>
+    <strong><%= f.label :author %></strong>
+    <%= f.text_field :author, class: "form-control", id: "exampleInputEmail1" %>
+    <strong><%= f.label :synopsis %></strong>
+    <%= f.text_area :synopsis, class: "form-control", id: "exampleInputEmail1" %>
+    <p><center><%= link_to "Go Back", books_path, class: "btn btn-info" %>
+    <%= f.submit class: "btn btn-danger" %></center></p>
+<% end %> 
+</div>  
+    

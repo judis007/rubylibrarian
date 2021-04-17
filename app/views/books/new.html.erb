@@ -1,13 +1,2 @@
 <h1><center>Add New Book</center></h1>
-<div class="form-group container">
-<%= form_with scope: :book, url: books_path, local: true do |f| %>
-    <strong><%= f.label :name %></strong>
-    <%= f.text_field :name, class: "form-control", id: "exampleInputEmail1" %>
-    <strong><%= f.label :author %></strong>
-    <%= f.text_field :author, class: "form-control", id: "exampleInputEmail1" %>
-    <strong><%= f.label :synopsis %></strong>
-    <%= f.text_area :synopsis, class: "form-control", id: "exampleInputEmail1" %>
-    <p><center><%= link_to "Go Back", books_path, class: "btn btn-info" %>
-    <%= f.submit class: "btn btn-warning" %></center></p>
-<% end %>  
-</div>  
+<%= render 'form' %>

@@ -1,11 +1,2 @@
 <center><h1>Add New Student</h1></center>
-<div class="form-group container">
-<%= form_with scope: :student, url: students_path, local: true do |f| %>
-    <strong><%= f.label :student %></strong>
-    <%= f.text_field :student, class: "form-control", id: "exampleInputEmail1" %>
-    <strong><%= f.label :address %></strong>
-    <%= f.text_area :address, class: "form-control", id: "exampleInputEmail1" %>
-    <p><center><%= link_to "Go Back", books_path, class: "btn btn-info" %>
-    <%= f.submit class: "btn btn-danger" %></center></p>
-<% end %> 
-</div>  
+<%= render 'form' %>

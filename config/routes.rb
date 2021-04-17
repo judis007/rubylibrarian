@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   
   resources :books
-  resources :students
+  resources :students, except: [:show]
 end

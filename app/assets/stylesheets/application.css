@@ -20,6 +20,10 @@
     font-size: 40px;
 }
 
+.container{
+    margin-top: 30px;
+}
+
 table th{ 
     text-align: center;
 }
@@ -31,7 +35,8 @@ table th{
 
 h1{
     font-family: 'pricedown';
-    font-size: 35px;
+    font-size: 45px;
+    margin-bottom: 40px;
 }
 
 
